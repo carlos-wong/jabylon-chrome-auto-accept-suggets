@@ -1,0 +1,15 @@
+{
+  "name": "Getting Started Example",
+  "version": "1.0",
+  "description": "Build an Extension!",
+  "manifest_version": 2,
+  "permissions": ["tabs", "<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["http://40.73.116.129:8080/*"],
+      "js": ["contentScript.js"],
+      "all_frames": true,
+      "run_at": "document_end"
+    }
+  ]
+}
